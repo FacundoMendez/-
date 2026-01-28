@@ -1,0 +1,200 @@
+
+.hero{
+  background-color: rgba(0, 0, 0, 0.87);
+  width: 98vw;
+  min-height: 98vh;
+  position: relative;
+  margin: 15px auto;
+  overflow: hidden;
+}
+
+.bg_hero{
+  z-index: 9999 ;
+  width: 100%;
+  position: absolute;
+  min-height: 98vh;
+}
+
+
+.boxTitle{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+  top: 4.8rem;
+  position: absolute;
+}
+
+.boxTitle span{
+  font-size: 2rem;
+  color: #4bfc8ff5;
+  font-weight: bold;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 14rem;
+  right: 10rem;
+}
+
+
+.boxTitle h2 {
+  top: 0;
+  position: absolute;
+  font-weight: bold;
+  z-index: 1;
+  font-size: clamp(1.5rem, 12vw, 14vw);
+  color: rgb(255, 255, 255);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 110%;
+}
+.canvas{
+  z-index: 2;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  width: 99vw  !important;
+  min-height: 98vh !important; 
+  max-height: 98vh !important; 
+  border: 2px solid rgba(140, 0, 255, 0.425);
+  overflow: hidden;
+}
+
+
+@media screen and (max-width: 1668px) {
+  .boxTitle span{
+    font-size: 2rem;
+    color: #4bfc8ff5;
+    top: 11.5rem;
+    right: 8rem;
+  }
+ 
+}
+
+
+@media screen and (max-width: 1568px) {
+  .boxTitle{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    top: 4.8rem;
+    position: absolute;
+  }
+  
+  .boxTitle span{
+    font-size: 2rem;
+    color: #4bfc8ff5;
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 10.5rem;
+    right: 7rem;
+  }
+ 
+}
+
+
+@media screen and (max-width: 1368px) {
+
+  .text_hero {
+    top: 2rem;
+    font-weight: bold;
+    font-size: clamp(1.5rem, 12vw, 17vw);
+    letter-spacing: 0.8px;
+  }
+
+  .boxTitle span{
+    font-size: 2rem;
+    top: 10rem;
+    right: 5.5rem;
+  }
+ 
+}
+
+@media screen and (max-width: 1140px) {
+
+
+  .boxTitle span{
+    font-size: 2rem;
+    top: 7.5rem;
+    right: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+
+  .text_hero {
+    top: 2rem;
+    font-weight: bold;
+    font-size: clamp(1.5rem, 16vw, 20vw);
+    letter-spacing: 0.8px;
+  }
+
+  .boxTitle span{
+    font-size: 2rem;
+    top: 6.1rem;
+    right: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .hero {
+    min-height: 54rem;
+  }
+
+  .boxTitle span{
+    font-size: 2rem;
+    top: 4.7rem;
+    right: 3rem;
+  }
+
+  .text_hero {
+    top: 2rem;
+    font-weight: bold;
+    font-size: clamp(1.3rem, 20vw, 22vw);
+    letter-spacing: 0.8px;
+  }
+
+  .canvas{
+    border: 2px solid rgba(140, 0, 255, 0);
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .hero {
+    min-height: 50rem;
+  }
+
+  .boxTitle span{
+    font-size: 2rem;
+    top: 4rem;
+    right: 2.4rem;
+  }
+
+  .text_hero {
+    font-weight: bold;
+    top: 2rem;
+    font-size: clamp(1.5rem, 24vw, 27vw);
+    letter-spacing: 0.8px;
+  }
+
+}
+
+
+@media screen and (max-width: 415px) {
+ 
+  .boxTitle span{
+    font-size: 1.6rem;
+    top: 3rem;
+    right: 1.8rem;
+  }
+
+}

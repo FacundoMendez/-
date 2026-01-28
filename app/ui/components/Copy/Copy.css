@@ -1,0 +1,207 @@
+.buttonBuyToken {
+  background: #12ff6d;
+  font-family: inherit;
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 18px;
+  border: 3px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+}
+
+.box_buy {
+  background-color: rgba(0, 0, 0, 0.637);
+  backdrop-filter: blur(4px);
+  height: 5rem;
+}
+
+.buttonBuyToken span {
+  color: black;
+  text-transform: uppercase;
+}
+
+.buttonBuyToken:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+.buttonBuyToken:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+}
+
+.address {
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+}
+
+.copy {
+  /* button */
+  --button-bg: #4dec8a;
+  --button-hover-bg: #12ff6d;
+  --button-text-color: #cccccc;
+  --button-hover-text-color: #8bb9fe;
+  --button-border-radius: 10px;
+  --button-diameter: 36px;
+  --button-outline-width: 1px;
+  --button-outline-color: rgb(141, 141, 141);
+  /* tooltip */
+  --tooltip-bg: #f4f3f3;
+  --toolptip-border-radius: 4px;
+  --tooltip-font-family: Menlo, Roboto Mono, monospace;
+  /* 👆 this field should not be empty */
+  --tooltip-font-size: 12px;
+  /* 👆 this field should not be empty */
+  --tootip-text-color: rgb(50, 50, 50);
+  --tooltip-padding-x: 7px;
+  --tooltip-padding-y: 7px;
+  --tooltip-offset: 8px;
+  --tooltip-transition-duration: 0.3s;
+  /* 👆 if you need a transition, 
+      just remove the comment,
+      but I didn't like the transition :| */
+}
+
+.copy {
+  box-sizing: border-box;
+  width: var(--button-diameter);
+  height: var(--button-diameter);
+  border-radius: var(--button-border-radius);
+  background-color: var(--button-bg);
+  color: var(--button-text-color);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -0.4rem;
+}
+
+.tooltip {
+  position: absolute;
+  opacity: 0;
+  visibility: 0;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font: var(--tooltip-font-size) var(--tooltip-font-family);
+  color: var(--tootip-text-color);
+  background: var(--tooltip-bg);
+  padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
+  border-radius: var(--toolptip-border-radius);
+  pointer-events: none;
+  transition: all var(--tooltip-transition-duration, 3s)
+    cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip::before {
+  content: attr(data-text-initial);
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: calc(var(--tooltip-padding-y) / 2 * -1);
+  width: var(--tooltip-padding-y);
+  height: var(--tooltip-padding-y);
+  background: inherit;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: -999;
+  pointer-events: none;
+}
+
+.copy svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkmark {
+  display: none;
+}
+
+/* actions */
+
+.copy:hover .tooltip,
+.copy:focus:not(:focus-visible) .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: calc((100% + var(--tooltip-offset)) * -1);
+}
+
+.copy:focus:not(:focus-visible) .tooltip::before {
+  content: attr(data-text-end);
+}
+
+.copy:focus:not(:focus-visible) .clipboard {
+  display: none;
+}
+
+.copy:focus:not(:focus-visible) .checkmark {
+  display: block;
+}
+
+.copy:hover,
+.copy:focus {
+  background-color: var(--button-hover-bg);
+}
+
+.copy:active {
+  outline: var(--button-outline-width) solid var(--button-outline-color);
+}
+
+.copy:hover svg {
+  color: var(--button-hover-text-color);
+}
+
+@media screen and (max-width: 1368px) {
+  .address {
+    font-size: 1.4rem;
+    letter-spacing: 0.8px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .address {
+    font-size: 1.1rem;
+    letter-spacing: 0.8px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .address {
+    font-size: 1rem;
+    letter-spacing: 0.2px;
+  }
+  .box_buy {
+    bottom: 7rem;
+    background-color: rgba(0, 0, 0, 0.637);
+    backdrop-filter: blur(10px);
+    height: 4rem;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .address {
+    font-size: 0.8rem;
+    letter-spacing: 0.2px;
+  }
+
+  .box_buy {
+    bottom: 3rem;
+    background-color: rgba(0, 0, 0, 0.637);
+    backdrop-filter: blur(10px);
+    height: 4rem;
+  }
+  .copy {
+    width: 2rem;
+    height: 2rem;
+    top: -0.4rem;
+  }
+}

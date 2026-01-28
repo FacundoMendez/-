@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'Russo One';
+  src: url('/public/assets/fonts/RussoOne-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hudson';
+  src: url('/public/assets/fonts/RussoOne-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+:root {
+  background-color: #000000;
+  overflow: hidden;
+
+}
+
+.App{
+  background: black;
+
+}
+
+   
+::selection {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  background-color: #4dec8a;
+}
+
+::-moz-selection {
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+   background-color: #4dec8a;
+}
+
+::-webkit-scrollbar {
+  background-color: rgb(17, 17, 17);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4dec8a;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4dec8a;
+}
