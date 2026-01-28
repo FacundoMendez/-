@@ -1,9 +1,14 @@
 "use client";
-import {  useRef  } from "react";
+import { useRef } from "react";
+import dynamic from "next/dynamic";
 import "./hero.css";
-import Scene from "../../ui/components/scene/Scene";
 import Lights from "../../ui/components/Lights/Lights";
 import AudioLoader from "../../ui/components/audioLoader/AudioLoader";
+
+// Load Scene only on client side (no SSR) - required for Three.js/R3F
+const Scene = dynamic(() => import("../../ui/components/scene/Scene"), {
+  ssr: false,
+});
 
 const Hero = () => {
   const scene_hero = useRef(null);
